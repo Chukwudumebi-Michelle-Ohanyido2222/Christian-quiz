@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Christian Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="card">
+      <header>
+        <div class="title">
+          <div class="logo">MC</div>
+          <div>
+            <h1>Christian Quiz  — Test Your Bible Knowledge</h1>
+            <p class="lead">Multiple choice questions. Score points and learn verses.</p>
+          </div>
+        </div>
+        <div class="meta">
+          <div>Best: <span id="bestScore">0</span></div>
+          <div class="small-muted">Questions shuffled each game</div>
+        </div>
+      </header>
+
+      <div class="quiz-area">
+        <main class="main">
+          <div class="progress"><i id="progressFill"></i></div>
+
+          <div id="questionArea" class="question-box">
+            <div class="question-number" id="qNumber">Question 1 / 15</div>
+            <div class="question-text" id="qText">Loading question…</div>
+
+            <div class="choices" id="choices"></div>
+
+            <div id="explain" class="explanation" style="display:none"></div>
+
+            <div class="controls">
+              <button id="nextBtn" class="btn small" style="display:none">Next Question</button>
+              <button id="skipBtn" class="btn ghost small">Skip</button>
+              <button id="restartBtn" class="btn ghost small" style="margin-left:auto">Restart</button>
+            </div>
+          </div>
+        </main>
+
+        <aside class="sidebar">
+          <div class="card-mini">
+            <div class="small-muted">Score</div>
+            <div class="score" id="score">0</div>
+            <div class="small-muted">Current streak: <span id="streak">0</span></div>
+            <hr>
+            <div class="small-muted">Progress</div>
+            <div id="progressText" class="small-muted">0 / 15</div>
+          </div>
+
+          <div class="card-mini">
+            <div class="small-muted">How to play</div>
+            <ol>
+              <li>Read the question</li>
+              <li>Click an answer</li>
+              <li>See the verse/reference</li>
+            </ol>
+            <button id="showAnswersBtn" class="btn ghost small">Show Answers at End</button>
+          </div>
+        </aside>
+      </div>
+
+      <footer id="endFooter" style="display:none">
+        <div class="card-mini end">
+          <div>Game Over</div>
+          <div class="final-score" id="finalScore">0</div>
+          <div class="small-muted">You answered <span id="correctCount">0</span> correctly out of <span id="totalQs">0</span></div>
+          <div class="actions">
+            <button id="playAgain" class="btn">Play Again</button>
+            <button id="reviewBtn" class="btn ghost">Review All Questions</button>
+          </div>
+        </div>
+      </footer>
+
+      <footer>
+        <div class="small-muted">Made with ❤️ — Learn and encourage one another.</div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
